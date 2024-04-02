@@ -23,4 +23,7 @@ Technologies Utilisées:
 - Rasa
 - Flask
 
+# Vidéo démonstrative
+
+
 Plongez dans une expérience conversationnelle unique avec ChatQuill, votre assistant virtuel plein de vie et de ressources. Explorez les possibilités infinies de communication et d'apprentissage avec notre chatbot intelligent.
