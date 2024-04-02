@@ -1,0 +1,45 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: CRFEntityExtractor
+- name: EntitySynonymMapper
+- name: CountVectorsFeaturizer
+- name: LexicalSyntacticFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 300
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  retrieval_intent: faq
+  featurizers: ["convert", "cvf-word"]
+  epochs: 100
+  constrain_similarities: true
+
+
+cors:
+  enabled: true
+  origins:
+    - http://127.0.0.1:5500
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+
+assistant_id: 20240331-042357-joint-tube
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
