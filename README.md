@@ -23,7 +23,7 @@ Technologies Utilisées:
 - Rasa
 - Flask
 
-# Vidéo démonstrative
+# [Vidéo démonstrative](https://github.com/NawalMalki/TP4/blob/main/video_demo.mp4)
 
 
 Plongez dans une expérience conversationnelle unique avec ChatQuill, votre assistant virtuel plein de vie et de ressources. Explorez les possibilités infinies de communication et d'apprentissage avec notre chatbot intelligent.
